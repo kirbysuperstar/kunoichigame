@@ -1,0 +1,7 @@
+- collission for enemies and player area
+- collission for enemies and shuriken
+- lives and score
+- actual graphics
+- enemy spawning
+- enemy spawnrate
+- proper unity input support and not just scanning for keycodes
