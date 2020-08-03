@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        ShootShuriken();
     }
 
     void MovePlayer()        //These four ifs handle the movement of the kunoichi based on which arrow key is pressed
@@ -44,6 +45,21 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(-7, middlePos, 0);
             currentPos = "middle";
+        }
+    }
+    void ShootShuriken() //The method of attack
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && currentPos == "top")
+        {
+            //spawn shuriken on top row
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && currentPos == "middle")
+        {
+            //spawn shuriken on middle row
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && currentPos == "bottom")
+        {
+            //spawn shuriken on bottom row
         }
     }
 }

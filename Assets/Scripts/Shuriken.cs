@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnHandler : MonoBehaviour
+public class Shuriken : MonoBehaviour
 {
-    public GameObject[] enemyPrefabs;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +13,6 @@ public class SpawnHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //spawn enemies at intervals
+        //check if colliding with enemies
     }
 }
