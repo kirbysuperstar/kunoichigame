@@ -5,3 +5,5 @@
 - enemy spawning
 - enemy spawnrate
 - proper unity input support and not just scanning for keycodes
+- bleeps and bloops
+- boot screen
