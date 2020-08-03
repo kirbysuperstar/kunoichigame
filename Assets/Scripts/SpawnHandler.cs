@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class SpawnHandler : MonoBehaviour
 {
+    // The enemy prefabs
     public GameObject enemy1;
     public GameObject enemy2;
     public GameObject enemy3;
 
+    // vector3 spawn positions for the enemies. Realistically only the y-axis changes, but having options is never bad.
     public Vector3 enemy1SpawnPos;
     public Vector3 enemy2SpawnPos;
     public Vector3 enemy3SpawnPos;
 
+    // Default timer for adjusting the spawn rate and speed of enemies and a switch to turn it on or off
     public float countdownTimer = 90;
     public bool timerRunning = false;
 
