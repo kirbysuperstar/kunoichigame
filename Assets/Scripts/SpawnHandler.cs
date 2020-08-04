@@ -19,7 +19,7 @@ public class SpawnHandler : MonoBehaviour
     public float countdownTimer = 90;
     public bool timerRunning = false;
 
-    private string spawnSpeed = "slow";
+    public string spawnSpeed = "slow";
 
     // Start is called before the first frame update
     void Start()

@@ -28,22 +28,22 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow) && currentPos == "middle")
         {
-            transform.position = new Vector3(-7, topPos, 0);
+            transform.position = new Vector3(-3.78f, topPos, 0);
             currentPos = "top";
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) && currentPos == "bottom")
         {
-            transform.position = new Vector3(-7, middlePos, 0);
+            transform.position = new Vector3(-3.78f, middlePos, 0);
             currentPos = "middle";
         }
         if (Input.GetKeyDown(KeyCode.DownArrow) && currentPos == "middle")
         {
-            transform.position = new Vector3(-7, bottomPos, 0);
+            transform.position = new Vector3(-3.78f, bottomPos, 0);
             currentPos = "bottom";
         }
         if (Input.GetKeyDown(KeyCode.DownArrow) && currentPos == "top")
         {
-            transform.position = new Vector3(-7, middlePos, 0);
+            transform.position = new Vector3(-3.78f, middlePos, 0);
             currentPos = "middle";
         }
     }
