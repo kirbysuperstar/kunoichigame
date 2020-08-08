@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public float bottomPos;
     private string currentPos;
 
+    public bool isGameOver = false;
+
     // Start is called before the first frame update
     void Start()
     {
