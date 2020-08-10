@@ -16,8 +16,9 @@ MonoBehaviour:
   material: {fileID: 21502261826212238}
   materialHashCode: -823433345
   m_Version: 1.1.0
-  m_SourceFontFileGUID: 5932dde97d72c09439c5fd7d568caef7
-  m_SourceFontFile_EditorRef: {fileID: 0}
+  m_SourceFontFileGUID: fc5951b4bddf0404ca723c37888cb6c4
+  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: fc5951b4bddf0404ca723c37888cb6c4,
+    type: 3}
   m_SourceFontFile: {fileID: 0}
   m_AtlasPopulationMode: 0
   m_FaceInfo:
@@ -1811,7 +1812,7 @@ MonoBehaviour:
     m_GlyphIndex: 16
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 28678345209715952}
+  - {fileID: 28206989663452306}
   m_AtlasTextureIndex: 0
   m_UsedGlyphRects:
   - m_X: 0
@@ -2387,7 +2388,7 @@ MonoBehaviour:
   m_FallbackFontAssetTable: []
   m_CreationSettings:
     sourceFontFileName: 
-    sourceFontFileGUID: 5932dde97d72c09439c5fd7d568caef7
+    sourceFontFileGUID: fc5951b4bddf0404ca723c37888cb6c4
     pointSizeSamplingMode: 0
     pointSize: 53
     padding: 5
@@ -2395,8 +2396,8 @@ MonoBehaviour:
     atlasWidth: 512
     atlasHeight: 512
     characterSetSelectionMode: 6
-    characterSequence: 20-7E,A1-FF,2010,2014-2016,2018-2019,201C-201D,2020-2021,2025-2026,2030,2032-2033,203B,203E,25A1
-    referencedFontAssetGUID: 
+    characterSequence: 20-7D,C6,D8,E6,F8,2010
+    referencedFontAssetGUID: f11a045d9d558e74c925731ea3878dc7
     referencedTextAssetGUID: 
     fontStyle: 0
     fontStyleModifier: 0
@@ -2462,7 +2463,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 28678345209715952}
+        m_Texture: {fileID: 28206989663452306}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
@@ -2531,7 +2532,7 @@ Material:
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
---- !u!28 &28678345209715952
+--- !u!28 &28206989663452306
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
