@@ -15,10 +15,13 @@ public class PlayerController : MonoBehaviour
 
     public bool isGameOver = false;
 
+    //private LivesHandler livesHandlerScript;
+    public GameObject gameOverCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
-        currentPos = "middle";        
+        currentPos = "middle";
     }
 
     // Update is called once per frame
@@ -32,6 +35,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             RestartGame();
+        }
+        if (LivesHandler.livesValue <= 0)
+        {
+            isGameOver = true;
+            gameOverCanvas.gameObject.SetActive(true);
         }
     }
 
@@ -65,15 +73,15 @@ public class PlayerController : MonoBehaviour
     }
     public void ShootShuriken() //The method of attack
     {
-        if (currentPos == "top")
+        if (currentPos == "top" && isGameOver != true)
         {
             Debug.Log("Firing on top row.");
         }
-        if (currentPos == "middle")
+        if (currentPos == "middle" && isGameOver != true)
         {
             Debug.Log("Firing on middle row.");
         }
-        if (currentPos == "bottom")
+        if (currentPos == "bottom" && isGameOver != true)
         {
             Debug.Log("Firing on bottom row.");
         }
