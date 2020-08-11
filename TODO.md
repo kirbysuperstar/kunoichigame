@@ -1,9 +1,10 @@
-- collission for enemies and player area
+- ~~collission for enemies and player area~~
 - collission for enemies and shuriken
-- lives and score
+- ~~lives and score~~
 - actual graphics
-- enemy spawning
+- ~~enemy spawning~~
 - enemy spawnrate
 - proper unity input support and not just scanning for keycodes
 - bleeps and bloops
-- boot screen
+- ~~boot screen~~
+- gameover and restart
