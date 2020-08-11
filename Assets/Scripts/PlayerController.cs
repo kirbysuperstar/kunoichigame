@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ShootShuriken();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartGame();
         }
     }
 
@@ -104,6 +109,10 @@ public class PlayerController : MonoBehaviour
             currentPos = "middle";
             Debug.Log("Moving from top to middle.");
         }
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }
