@@ -14,9 +14,11 @@ public class PlayerController : MonoBehaviour
     private string currentPos;
 
     public bool isGameOver = false;
-
-    //private LivesHandler livesHandlerScript;
     public GameObject gameOverCanvas;
+    public GameObject shurikenPrefab;
+
+    public static int maxShots = 3;
+    public static int shotCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -76,17 +78,26 @@ public class PlayerController : MonoBehaviour
     }
     public void ShootShuriken() //The method of attack
     {
-        if (currentPos == "top" && isGameOver != true)
+        if (currentPos == "top" && isGameOver != true && shotCount < maxShots)
         {
             Debug.Log("Firing on top row.");
+            Vector3 spawnPos = new Vector3(-3.78f, topPos, 0);
+            Instantiate(shurikenPrefab, spawnPos, shurikenPrefab.transform.rotation);
+            shotCount += 1;
         }
-        if (currentPos == "middle" && isGameOver != true)
+        if (currentPos == "middle" && isGameOver != true && shotCount < maxShots)
         {
             Debug.Log("Firing on middle row.");
+            Vector3 spawnPos = new Vector3(-3.78f, middlePos, 0);
+            Instantiate(shurikenPrefab, spawnPos, shurikenPrefab.transform.rotation);
+            shotCount += 1;
         }
-        if (currentPos == "bottom" && isGameOver != true)
+        if (currentPos == "bottom" && isGameOver != true && shotCount < maxShots)
         {
             Debug.Log("Firing on bottom row.");
+            Vector3 spawnPos = new Vector3(-3.78f, bottomPos, 0);
+            Instantiate(shurikenPrefab, spawnPos, shurikenPrefab.transform.rotation);
+            shotCount += 1;
         }
     }
     public void UpButton()

@@ -58,6 +58,7 @@ public class SpawnHandler : MonoBehaviour
             }
         }
         //spawn enemies at intervals
+        //debug
         if (Input.GetKeyDown(KeyCode.S))
         {
             SpawnRandomEnemy();
