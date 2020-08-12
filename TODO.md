@@ -4,7 +4,7 @@
 - actual graphics
 - ~~enemy spawning~~
 - enemy spawnrate
-- proper unity input support and not just scanning for keycodes
+- proper unity input support and not just scanning for keycodes (probably won't do this)
 - bleeps and bloops
 - ~~boot screen~~
-- gameover and restart
+- ~~gameover and restart~~
