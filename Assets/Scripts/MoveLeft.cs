@@ -8,6 +8,7 @@ public class MoveLeft : MonoBehaviour
     private PlayerController playerControllerScript;
     private float leftBound = -4;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,19 @@ public class MoveLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Set the speed based on the spawn speed
+        if (SpawnHandler.spawnSpeed == "slow")
+        {
+            speed = 3;
+        }
+        if (SpawnHandler.spawnSpeed == "medium")
+        {
+            speed = 4.5f;
+        }
+        if (SpawnHandler.spawnSpeed == "fast")
+        {
+            speed = 6;
+        }
         //Move left if the game isn't over
         if (playerControllerScript.isGameOver == false)
         {

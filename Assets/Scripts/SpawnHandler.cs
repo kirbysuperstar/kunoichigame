@@ -21,16 +21,21 @@ public class SpawnHandler : MonoBehaviour
     public float countdownTimer = 90;
     public bool timerRunning = false;
 
-    public string spawnSpeed = "slow";
+    public static string spawnSpeed = "slow";
 
-    private float startDelay = 2;
     private int spawnLine;
+    // Minimum time between spawns
+    public float spawnRate = 1.5f;
+    // Maximum spawn time from minimum
+    public float spawnRateVariance = 4f;
 
     // Start is called before the first frame update
     void Start()
     {
         timerRunning = true;
         Debug.Log("Starting at slow speed.");
+        //InvokeRepeating(SpawnRandomEnemy, startDelay, repeatRate);
+        RandomSpawnrate();
     }
 
     // Update is called once per frame
@@ -48,6 +53,7 @@ public class SpawnHandler : MonoBehaviour
             {
                 Debug.Log("First time threshold reached - increasing speed to medium.");
                 spawnSpeed = "medium";
+                spawnRateVariance = 3f;
             }
 
             if (countdownTimer < 30)
@@ -55,6 +61,7 @@ public class SpawnHandler : MonoBehaviour
                 Debug.Log("Second time threshold reached - increasing speed to fast.");
                 spawnSpeed = "fast";
                 timerRunning = false;
+                spawnRateVariance = 2f;
             }
         }
         //spawn enemies at intervals
@@ -87,5 +94,16 @@ public class SpawnHandler : MonoBehaviour
             int enemyIndex = 2;
             Instantiate(enemyPrefabs[enemyIndex], spawnPos, enemyPrefabs[enemyIndex].transform.rotation);
         }
+    }
+    void RandomSpawnrate()
+    {
+        //Figure out a spawn time and tell debug
+        float nextSpawnTime = Random.Range(spawnRate, spawnRate * spawnRateVariance);
+        Debug.Log("Spawning in" + nextSpawnTime + "seconds.");
+        //Invoke the spawner with that time
+        Invoke("SpawnRandomEnemy", nextSpawnTime);
+        //Begin again
+        Invoke("RandomSpawnrate", nextSpawnTime);
+
     }
 }
