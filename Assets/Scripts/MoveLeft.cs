@@ -7,12 +7,13 @@ public class MoveLeft : MonoBehaviour
     private float speed = 3;
     private PlayerController playerControllerScript;
     private float leftBound = -4;
+    public AudioClip playerHitNoise;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();        
     }
 
     // Update is called once per frame
@@ -39,6 +40,7 @@ public class MoveLeft : MonoBehaviour
         //if an enemy hits the goal, destroy it and subtract a life
         if (transform.position.x < leftBound && gameObject.CompareTag("Obstacles"))
         {
+            AudioSource.PlayClipAtPoint(playerHitNoise, new Vector3(0, 0, 0), 2f);
             Destroy(gameObject);
             LivesHandler.livesValue -= 1;
         }
