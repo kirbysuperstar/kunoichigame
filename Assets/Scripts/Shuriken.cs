@@ -7,6 +7,7 @@ public class Shuriken : MonoBehaviour
     private PlayerController playerControllerScript;
     public float speed;
     private float rightBound = 4.44f;
+    public AudioClip shurikenHitNoise;
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +30,12 @@ public class Shuriken : MonoBehaviour
             PlayerController.shotCount -= 1;
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacles"))
         {
+            AudioSource.PlayClipAtPoint(shurikenHitNoise, new Vector3(0, 0, 0), 2f);
             Debug.Log("Shuriken hit an enemy!");
-            //maybe make a particle here?
-            //hitParticle.Play();
             Destroy(gameObject);
             Destroy(collision.collider.gameObject);
             ScoreHandler.scoreValue += 1;
