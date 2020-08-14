@@ -2137,7 +2137,8 @@ MonoBehaviour:
   enemy3SpawnPos: {x: 4.3, y: -0.46, z: 0}
   countdownTimer: 90
   timerRunning: 0
-  spawnSpeed: slow
+  spawnRate: 1.5
+  spawnRateVariance: 4
 --- !u!4 &1843630204
 Transform:
   m_ObjectHideFlags: 0
