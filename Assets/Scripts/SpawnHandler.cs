@@ -34,7 +34,6 @@ public class SpawnHandler : MonoBehaviour
     {
         timerRunning = true;
         Debug.Log("Starting at slow speed.");
-        //InvokeRepeating(SpawnRandomEnemy, startDelay, repeatRate);
         RandomSpawnrate();
     }
 
