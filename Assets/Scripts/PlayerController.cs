@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         currentPos = "middle";
+        
     }
 
     // Update is called once per frame
@@ -134,7 +135,9 @@ public class PlayerController : MonoBehaviour
     }
     public void RestartGame()
     {
-        SceneManager.LoadScene(0);
+        LivesHandler.livesValue += 3;
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 
 }
